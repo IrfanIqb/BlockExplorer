@@ -1,0 +1,1058 @@
+@charset "utf-8";
+/* ==========================================================================
+   CSS Reset
+   ========================================================================== */
+/*
+* html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+* Richard Clark (http://richclarkdesign.com)
+* http://cssreset.com
+*/
+@import 'app';
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:$yellow;color:$black;text-decoration:none}mark{background-color:$yellow;color:$black;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+*,*:after,*:before {box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;-o-box-sizing: border-box;}
+
+/* ==========================================================================
+   Common CSS
+   ========================================================================== */
+  html, body {
+  height: 100%;
+  margin: 0;
+}
+body {font-size:14px; line-height:18px; font-family: 'Montserrat-Regular'; color: $lightblack; background: $white;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+a {outline: none;text-decoration: none;color: $lightred; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out;}
+a:hover,a:focus{text-decoration: none; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out;}
+.container{width: 1140px;margin: 0 auto;}
+.clear{clear:both}
+.clear::after,
+.clear::before{clear:both;content:'';display:table}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    	url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'),
+     	url('../fonts/Montserrat-Regular/Montserrat-Regular.ttf')  format('truetype'),
+     	url('../fonts/Montserrat-Regular/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*header styles start here*/
+.home-bg-clr{
+		background: linear-gradient(45deg, #27285e, #4b4494);
+		min-height:100%;
+		position:relative;
+		margin-bottom:-76px;
+	.home-bg{
+		background:url('../images/home-bg.png') no-repeat;
+		background-size:cover;
+		height:calc(100vh - 76px);
+		header{
+			padding:45px 0 0;
+			position:fixed;
+			top:0;
+			width:100%;
+			.logo{
+				padding:0px;
+				margin:0px;
+			}
+			.menu{
+				padding: 7px 0 0;
+				margin:0px;
+				float:right;
+				.search{
+					a{
+						float:right;
+						color: $white;
+	    				font-size: 20px;
+	    				line-height:20px;
+					}
+				}
+				nav{
+					float:right;
+					ul{
+						li{
+							float:left;
+							margin-right:60px;
+							a{
+								font-size: 14px;
+								font-weight: 600;
+								line-height:20px;
+								color: $white;
+								&:hover{
+									color:$black;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*header styles end here*/
+
+/*chain-blk start here */
+.chain-blk{
+
+	.chainblk-info{
+		text-align:center;
+		width:755px;
+		margin:0 auto;
+		h1{
+			font-size: 32px;
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.41;
+			letter-spacing: normal;
+			color: $white;
+			padding-bottom:50px;
+		}
+		.chain-form{
+			background:$white;
+			width:100%;
+			@include border-radius(3px);
+			input[type="text"]{
+				display: inline-block;
+			    float: left;
+			    width: 70%;
+			    @include add-border(1px,$white,all);
+			    font-size: 14px;
+			    font-weight: 300;
+			    line-height: 1.41;
+			    color: $grey;
+			    padding: 18px 12px 18px 60px;
+			    outline: none;
+			    appearance: none;
+			    -webkit-appearance: none;
+			    background: $white url(../images/search.png) no-repeat;
+			    background-position: 16px center;
+			    border-radius: 3px 0 0 3px;
+				::-webkit-input-placeholder {
+					font-size: 14px;
+					font-weight: 300;
+					line-height: 1.41;
+					color: $grey;
+				}
+			}
+			.chain-select{
+				float:right;
+				width:30%;
+				padding:0;
+				@include add-border(1px,$lightgrey2,left);
+				text-align: center;
+				position:relative;
+				.dd{
+					border:none;
+					width: 100% !important;
+					padding:17px 0 40px;
+					.ddTitle{
+						background:$white;
+						.divider{
+							border:none;
+						}
+						img{
+							width:24px;
+							height:24px;
+							display: inline-block;
+							vertical-align: middle;
+							float:left;
+							margin: 0 15px 0 12px;
+						}
+						.ddlabel{
+							float:left;
+							    line-height: 27px;
+						}
+					}
+				}
+				.ddChild {
+				    position: absolute;
+				    display: none;
+				    width: 100%;
+				    top: 57px !important;
+				    overflow-y: auto;
+				    overflow-x: hidden;
+				    zoom: 1;
+				    @include add-border(1px,#c1c1c1,all);
+				    z-index: 9999;
+				    li {
+					    padding: 5px;
+					    background-color: $white;
+					    @include add-border(1px,$lightgrey3,bottom);
+					    list-style-type:none;
+
+						img{
+							width:24px;
+							height:24px;
+							display: inline-block;
+							vertical-align: middle;
+							float:left;
+							margin: 0 15px 0 8px;
+						}
+						.ddlabel{
+							float:left;
+							    line-height: 27px;
+						}
+					}
+				}
+				.ddcommon .ddArrow {
+				    display: inline-block;
+				    position: absolute;
+				    top: 50%;
+				    right: 14px;
+				    width: 16px;
+				    height: 16px;
+				    margin-top: -2px;
+				    background: url(../images/drop-arrow.png) no-repeat;
+				}
+			}
+		}
+	}
+}
+
+/*chain-blk end here */
+
+/*footer start here*/
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height:76px;
+	.ftr-lft{
+		padding:0px;
+		margin:0px;
+		p{
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 1.41;
+			color: $white;
+		}
+		a{
+			font-size: 10px;
+			font-weight: 600;
+			    line-height: 46px;
+			color: $white;
+			display:inline-block;
+			padding-right:20px;
+			&:hover{
+				color:$green;
+			}
+		}
+	}
+	.ftr-rgt{
+		padding:0px;
+		margin:0px;
+		ul{
+			float:right;
+			li{
+				display:inline-block;
+				float:left;
+				margin-left:20px;
+
+			}
+		}
+	}
+}
+
+/*footer end here*/
+.footer,
+.push {
+  height:76px;
+}
+
+
+.chain-blk{
+	height:100%;
+	.container{
+	    display: table;
+    	height: 100%;
+    	.row{
+    	display: table-cell;
+	    vertical-align: middle;
+	    height: 100%;
+    	}
+	}
+}
+
+/* account-dark page start here */
+header{
+	position:fixed;
+	width:100%;
+	z-index:999;
+	@include transition(all ease-in-out 0.4s);
+	.header-top{
+			padding:45px 0 42px;
+			.logo{
+				padding:0px;
+				margin:0px;
+			}
+			.menu{
+				margin:0px;
+				padding:0;
+				float:right;
+				.search{
+					a{
+						float:right;
+						color: $blue;
+	    				font-size: 20px;
+	    				line-height:20px;
+					}
+				}
+				nav{
+					display: inline-block;
+    				float: right;
+					padding: 11px 0 0;
+					ul{
+						li{
+							display:inline-block;
+							float:left;
+							margin-right:18px;
+
+							a{
+								font-size: 14px;
+								font-weight: 600;
+								line-height:20px;
+								color: $blue;
+								&:hover{
+									color:$green;
+								}
+							}
+						}
+					}
+				}
+				.header-form{
+					background:$white;
+					width:370px;
+					float:right;
+					@include border-radius(3px);
+					@include add-border(1px,$lightgrey1,all);
+					input[type="text"]{
+						display:inline-block;
+						float:left;
+						width:70%;
+						@include add-border(1px,$white,all);
+						font-size: 14px;
+						font-weight: 300;
+						line-height: 1.41;
+						color: $grey;
+						padding: 10px 34px;
+						outline:none;
+						appearance: none;
+						-webkit-appearance: none;
+						background:$white url('../images/search2.png') no-repeat;
+						background-position: 5px center;
+						border-radius: 3px 0 0 3px;
+						::-webkit-input-placeholder {
+							font-size: 14px;
+							font-weight: 300;
+							line-height: 1.41;
+							color: $grey;
+						}
+					}
+					.chain-select{
+						float:right;
+						width:20%;
+						padding:0;
+						@include add-border(1px,$lightgrey2,left);
+						text-align: center;
+						position:relative;
+						.dd{
+							border:none;
+							width:100% !important;
+							padding:7px 0 33px;
+							.ddTitle{
+								background:$white;
+								.divider{
+									border:none;
+								}
+								img{
+									width:24px;
+									height:24px;
+									display: inline-block;
+									vertical-align: middle;
+									float:left;
+									margin: 0 15px 0 12px;
+								}
+								.ddlabel{
+									float:left;
+									    line-height: 27px;
+								}
+							}
+						}
+						.ddChild {
+						    position: absolute;
+						    display: none;
+						    width: 100%;
+						    @include add-border(1px,$lightgrey1,all);
+						    top:42px !important;
+						    overflow-y: auto;
+						    overflow-x: hidden;
+						    zoom: 1;
+						    z-index: 9999;
+						    li {
+							    padding: 5px;
+							    background-color: $white;
+							    @include add-border(1px,$lightgrey3,bottom);
+							    list-style-type:none;
+
+								img{
+									width:24px;
+									height:24px;
+									display: inline-block;
+									vertical-align: middle;
+									float:left;
+									margin: 0 15px 0 8px;
+								}
+								.ddlabel{
+									float:left;
+									    line-height: 27px;
+								}
+							}
+						}
+						.ddcommon .ddArrow {
+						    display: inline-block;
+						    position: absolute;
+						    top: 50%;
+						    right: 14px;
+						    width: 16px;
+						    height: 16px;
+						    margin-top: -2px;
+						    background: url(../images/drop-arrow.png) no-repeat;
+						}
+					}
+				}
+				.men-icon{
+					float:right;
+					    margin: 0 0 0 25px;
+				}
+
+			}
+	}
+
+}
+.header_bottom{
+	padding:131px 0 0;
+	.header-btm{
+		margin:0 0 58px;
+		.header-btm-lft{
+			padding:0px;
+			margin:0px;
+			img{
+				display:inline-block;
+				vertical-align: middle;
+			}
+			.btm-lft-info{
+				display:inline-block;
+				vertical-align: middle;
+				padding-left: 15px;
+				h2{
+					font-size: 32px;
+					font-weight: 300;
+					font-style: normal;
+					font-stretch: normal;
+					line-height: normal;
+					letter-spacing: normal;
+					color: $blue;
+				}
+				p{
+					font-size: 18px;
+					font-weight: 300;
+					color: $blue;
+				}
+			}
+		}
+		.header-btm-rgt{
+			padding: 21px 0 0 0;
+			margin:0px;
+			ul{
+				float:right;
+				li{
+					display: inline-block;
+					@include add-border(1px,$green,all);
+					@include border-radius(3px);
+					float: left;
+					padding: 10px 20px;
+					margin-left: 25px;
+
+
+
+					a{
+						font-size: 10px;
+						font-weight: 600;
+						line-height: 1.41;
+						color: $green;
+						img{
+							vertical-align: middle;
+    						padding-right: 10px;
+						}
+						.fa{
+							font-size:20px;
+							padding-right: 10px;
+							vertical-align: middle;
+						}
+					}
+				}
+li.active{
+						background:$green;
+					}
+					li.active a{
+						color:$white;
+					}
+			}
+		}
+	}
+}
+.stycky_header{
+	background:$white;
+}
+.stycky_header .header-top{
+	padding:20px 0;
+	@include transition(all ease-in-out 0.4s);
+}
+
+
+/*graph-blk start here */
+.graph-blk{
+	background-image: linear-gradient(to top, $lightblue, $blue);
+	padding: 107px 0;
+	.lft-graph-blk{
+		padding:0;
+		margin:0px;
+		ul{
+			li{
+				list-style-type:none;
+				padding-left:70px;
+				margin-bottom:60px;
+				&:nth-child(1){
+					background:url('../images/coin-icon1.png') no-repeat;
+					background-size:57px;
+					width: 100%;
+					height: 57px;
+					background-position: 0px center;
+				}
+				&:nth-child(1) p{
+					color: $green;
+				}
+				&:nth-child(2){
+					background:url('../images/coin-icon2.png') no-repeat;
+					background-size:57px;
+					width: 100%;
+					height: 57px;
+					background-position: 0px center;
+				}
+				&:nth-child(2) p{
+					color: $skyblue;
+					padding-bottom: 18px;
+				}
+				&:nth-child(3){
+					background:url('../images/coin-icon3.png') no-repeat;
+					background-size:57px;
+					width: 100%;
+					height: 57px;
+					background-position: 0px center;
+				}
+				&:nth-child(3) p{
+					color: $orange;
+				}
+				&:nth-child(4){
+					background:url('../images/coin-icon4.png') no-repeat;
+					background-size:57px;
+					width: 100%;
+					height: 57px;
+					background-position: 0px center;
+				}
+				&:nth-child(4) p{
+					color: $white;
+				}
+				h6{
+					font-size: 10px;
+					font-weight: 600;
+					color: $white;
+					padding-bottom:22px;
+				}
+				p{
+					font-size: 24px;
+					font-weight: 300;
+
+				}
+				h5{
+					width:100%;
+					float:left;
+					small{
+						float:left;
+						display:inline-block;
+						font-size: 10px;
+						font-weight: 600;
+						font-style: normal;
+						font-stretch: normal;
+						line-height: normal;
+						letter-spacing: normal;
+						color: $skyblue;
+						padding-right:30px;
+					}
+					span{
+						float:left;
+						display:inline-block;
+						font-size: 10px;
+						font-weight: 600;
+						font-style: normal;
+						font-stretch: normal;
+						line-height: normal;
+						letter-spacing: normal;
+						color: $lightorg;
+					}
+				}
+			}
+		}
+	}
+	.rgt-graph-blk{
+		.balance-overview{
+
+			h4{
+				display:inline-block;
+				float:left;
+				font-size: 18px;
+				font-weight: 300;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: 1.41;
+				letter-spacing: normal;
+				color: $white;
+			}
+			ul{
+				display:inline-block;
+				float:right;
+				li{
+					margin-left:20px;
+					display:inline-block;
+					list-style-type:none;
+					padding:0 20px;
+    				@include add-border(1px,transparent,all);
+					&.active{
+						@include add-border(1px,$white,all);
+						@include border-radius(3px);
+					}
+					&:hover{
+						@include add-border(1px,$white,all);
+						@include border-radius(3px);
+					}
+					a{
+						opacity: 0.6;
+						font-size: 10px;
+						font-weight: 600;
+						line-height: 18px;
+						color: $white;
+						    text-transform: uppercase;
+					}
+				}
+			}
+		}
+		img{
+				width:100%;
+			}
+	}
+}
+/*graph-blk end here */
+
+/*account-tabs blk start here */
+.account-tabs{
+	.account-tab-head{
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#424081+65,3a3879+100 */
+background: rgb(66,64,129); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(66,64,129,1) 65%, rgba(58,56,121,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(66,64,129,1) 65%,rgba(58,56,121,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(66,64,129,1) 65%,rgba(58,56,121,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424081', endColorstr='#3a3879',GradientType=0 ); /* IE6-9 */
+    	padding: 50px 0;
+		ul{
+			text-align:center;
+			list-style-type:none;
+			li{
+				margin-right:50px;
+				display:inline-block;
+				position:relative;
+
+				a{
+					font-size: 18px;
+					font-weight: 300;
+					color: $white;
+				}
+
+			&.active{
+				&:after{
+					content: '';
+					width: 0;
+					height: 0;
+					@include add-border(15px,transparent,left);
+				    @include add-border(15px,transparent,right);
+				    @include add-border(15px,$white,bottom);
+					position: absolute;
+					bottom: -50px;
+					top: auto;
+					left: 45%;
+    				margin-left: -10px;
+					}
+				}
+			}
+		}
+	}
+	.account-tab-info{
+		padding: 50px 0;
+		.account-tab-in-head{
+			width:100%;
+			float:left;
+			margin-bottom: 49px;
+			.select-list{
+				display:inline-block;
+				float:left;
+				.select-one{
+					width:250px;
+					float:left;
+					margin-right:20px;
+					.dd{
+					    width: 100% !important;
+					-webkit-tap-highlight-color: transparent;
+				    background-color: $white;
+				    @include border-radius(5px);
+				    @include add-border(1px,$lightskyblue,all);
+				    box-sizing: border-box;
+				    clear: both;
+				    cursor: pointer;
+				    display: block;
+				    float: left;
+				    font-family: inherit;
+				    font-size: 14px;
+				    font-weight: normal;
+				    height: 42px;
+				    line-height: 40px;
+				    outline: none;
+				    position: relative;
+				    text-align: left !important;
+				    -webkit-transition: all 0.2s ease-in-out;
+				    transition: all 0.2s ease-in-out;
+				    -webkit-user-select: none;
+				    -moz-user-select: none;
+				    -ms-user-select: none;
+				    user-select: none;
+				    white-space: nowrap;
+				    width: 100%;
+					.ddTitle{
+						.divider{
+							border:none;
+						}
+						.ddlabel{
+							line-height: 27px;
+    						padding: 0 10px;
+						}
+					}
+				}
+				.ddChild {
+				    position: absolute;
+				    display: none;
+				    width: 100%;
+				    @include add-border(1px,$lightskyblue,all);
+				    overflow-y: auto;
+				    overflow-x: hidden;
+				    zoom: 1;
+				    z-index: 9999;
+				    li {
+					    padding: 5px;
+					    background-color: $white;
+					    @include add-border(1px,$lightgrey3,bottom);
+					    list-style-type:none;
+
+						img{
+							width:24px;
+							height:24px;
+							display: inline-block;
+							vertical-align: middle;
+							float:left;
+							margin: 0 15px 0 8px;
+						}
+						.ddlabel{
+							float:left;
+							    line-height: 27px;
+						}
+					}
+				}
+				.ddcommon .ddArrow {
+				    display: inline-block;
+				    position: absolute;
+				    top: 50%;
+				    right: 14px;
+				    width: 16px;
+				    height: 16px;
+				    margin-top: -2px;
+				    background: url(../images/drop-arrow.png) no-repeat;
+				}
+				}
+				.select-two{
+					width:182px;
+				}
+			}
+			.address-blk{
+				display:inline-block;
+				float:right;
+				ul{
+					float: right;
+					li{
+						display:inline-block;
+						float:left;
+						 @include add-border(1px,$green,all);
+						 margin-left:20px;
+						 @include border-radius(3px);
+						a{
+							font-size: 10px;
+							font-weight: 600;
+							line-height: 15px;
+							color: $green;
+							padding: 12px 15px;
+							display: inline-block;
+							.fa{
+								font-size:20px;
+								vertical-align:middle;
+								padding-right:10px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.data-table{
+			margin-bottom: 50px;
+			table{
+				width:100%;
+				padding:0 20px;
+				tr{
+					&:nth-child(1){
+						background-image: linear-gradient(to top, $lightblue, $blue);
+					}
+					.green-bg{
+							background:$green;
+						}
+					.green-txt{
+						color:$green;
+					}
+					th{
+						padding: 27px 20px;
+						color:$white;
+					}
+					td{
+						font-size: 13px;
+						color: $blue;
+						padding:17px 20px;
+						small{
+							font-size: 10px;
+							font-weight: 600;
+							color: $white;
+							background:$lightorg;
+							width:35px;
+							@include border-radius(3px);
+							text-align:center;
+							display:inline-block;
+							padding: 2px 0px;
+						}
+					}
+				}
+			}
+		}
+		a.load-more{
+			display:block;
+			margin:0 auto;
+			width: 123px;
+			@include add-border(1px,$green,all);
+			font-size: 10px;
+			font-weight: 600;
+			line-height: 1.41;
+			color: $green;
+			text-align:center;
+			padding:8px 0;
+			@include border-radius(3px);
+			&:before{
+				content: "\f021";
+				font-family: 'FontAwesome';
+				padding-right: 10px;
+				font-size: 20px;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+/*account-tabs blk end here */
+
+.account-footer{
+	position:static;
+	height:auto;
+	background: linear-gradient(to top, $lightblue, $blue);
+	.footer-top{
+		padding:0 0 104px;
+		@include add-border(1px,$white,bottom);
+		margin-bottom:50px;
+		ul{
+			list-style-type:none;
+			li{
+				display:inline-block;
+				&:nth-child(1){
+					width:50%;
+				}
+				&:nth-child(2){
+					width:15%;
+				}
+				&:nth-child(3){
+					width:15%;
+				}
+				&:nth-child(4){
+					width:15%;
+				}
+				h5{
+					font-size: 16px;
+					font-weight: 300;
+					line-height: 20px;
+					color: $white;
+					padding-bottom:20px;
+				}
+				a{
+					display:block;
+					font-size: 10px;
+					font-weight: 600;
+					line-height: 20px;
+					color: $white;
+					padding-bottom:5px;
+					&:hover{
+						color:$green;
+					}
+				}
+				p{
+					font-size: 14px;
+					line-height: 18px;
+					color: $white;
+					padding-top:25px;
+				}
+			}
+		}
+	}
+
+}
+.footer-bg{
+	background:url('../images/footer-bg.png') no-repeat;
+	background-position:left center;
+	padding:150px 0 70px;
+}
+
+.nice-select {
+    -webkit-tap-highlight-color: transparent;
+    background-color: $white;
+    @include border-radius(5px);
+    @include add-border(1px,$lightskyblue,all);
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: 100%;
+}
+.nice-select:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    @include add-border(4px,transparent,left);
+    @include add-border(4px,transparent,right);
+    @include add-border(4px,$black,top);
+    position: absolute;
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+.nice-select .list {
+    background-color: $white;
+    @include border-radius(5px);
+    box-shadow: 0 0 0 1px rgba(68, 88, 112, 0.11);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: static;
+    top: 100%;
+    left: 0;
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scale(0.75) translateY(-21px);
+    -ms-transform: scale(0.75) translateY(-21px);
+    transform: scale(0.75) translateY(-21px);
+    -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    z-index: 9;
+}
+.nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1) translateY(0);
+    -ms-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+}
+.nice-select.open:after {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    right: 15px;
+    top: 15px;
+}
+.menu-icon{
+	display:none;
+}
+
+.chain-form .nice-select{
+
+	width: 83%;
+	float: right;
+	border: transparent;
+	height: 20px;
+	line-height: 20px;
+}
+.chain-form .nice-select:after {
+	content: "\f078";
+    font-family: 'FontAwesome';
+    color: $lightgrey;
+    position: absolute;
+    right: 13px;
+    top: 0px;
+    @include add-border(1px,$black,top);
+}
+.chain-form .nice-select.open:after {
+	top: 20px;
+	right: 0px;
+}
+.chain-form .nice-select.open .list{
+	padding:10px 5px;
+}
+.chain-blk .chainblk-info .chain-form .chain-select:after{
+	display:none;
+}
+.select-one .nice-select span.current, .select-two .nice-select span.current{
+	    padding: 0 14px;
+}
+.nice-select.open .list li{
+	padding:0 10px;
+}

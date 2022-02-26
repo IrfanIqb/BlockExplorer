@@ -1,0 +1,62 @@
+
+$white:#ffffff;
+$black:#000000;
+$green:#6fcf97;
+$blue:#26285a;
+$skyblue:#56ccf2;
+$orange:#f27a54;
+$grey:#343a40;
+$lightgrey:#989c9f;
+$yellow:#ff9;
+$lightblack:#1d1d1b;
+$lightred:#b41124;
+$lightgrey1:#ededed;
+$lightgrey2:#e6e6e6;
+$lightgrey3:#c3c3c3;
+$lightblue:#4b4495;
+$lightorg:#f96c5a;
+$lightskyblue:#e0e7ee;
+/*********** Button COLORS MIXNS ****************/
+$blue_btn:#4990e2;
+$hover_state:#0d52a2;
+
+
+
+
+/*********** OPACITY COLORS MIXNS ****************/
+
+/* Black opacity mixin for background, Use @include opacity-black(0.5); where 0.5 is the opacity */
+
+@mixin opacity-black($opacity) {
+	background: rgba($black, $opacity);
+}
+
+/* Black opacity mixin for text color, Use @include opacity-black-text(0.5); where 0.5 is the opacity */
+@mixin opacity-black-text($opacity) {
+  color: rgba($black, $opacity);
+}
+@mixin opacity-black-text($opacity) {
+	color: rgba($black, $opacity);
+}
+/* Black opacity mixin for border color, Use @include opacity-black-border(0.5); where 0.5 is the opacity */
+
+@mixin opacity-black-border($opacity) {
+	border-color: rgba($black, $opacity);
+}
+/* White opacity mixin for text color, Use @include opacity-white-text(0.5); where 0.5 is the opacity */
+
+
+/* White opacity mixin for text color, Use @include opacity-white(0.5); where 0.5 is the opacity */
+
+@mixin opacity-white($opacity) {
+	background: rgba($white, $opacity);
+}
+
+@mixin opacity-white-text($opacity) {
+	color: rgba($white, $opacity);
+}
+/* White opacity mixin for text color, Use @include opacity-white-text(0.5); where 0.5 is the opacity */
+
+
+/* Black opacity mixin for background, Use @include opacity-black(0.5); where 0.5 is the opacity */
+
